@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "The Dice is rolled!", Toast.LENGTH_SHORT).show()
             rollDice()
         }
+
+        //Do a dice roll when the app starts
+        rollDice()
     }
 
     /**
@@ -30,9 +33,9 @@ class MainActivity : AppCompatActivity() {
         val resultTextView: TextView = findViewById(R.id.textView)
         resultTextView.text = diceRoll.toString()
 
-        val diceImage :ImageView = findViewById(R.id.imageView)
+        val diceImage: ImageView = findViewById(R.id.imageView)
 
-        val drawableResource = when(diceRoll) {
+        val drawableResource = when (diceRoll) {
             1 -> R.drawable.dice_1
             2 -> R.drawable.dice_2
             3 -> R.drawable.dice_3
